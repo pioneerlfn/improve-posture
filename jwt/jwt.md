@@ -65,21 +65,8 @@ func GenToken() string {
 	// 计算hash之前剪除padding字符
 	data := strings.TrimRight(hBase64URL, "=") + "." + strings.TrimRight(pBase64URL, "=")
 
-
-	// Create a new HMAC by defining the hash type and the key (as byte array)
-	ha := hmac.New(sha256.New, []byte(Secret))
-
-	// Write Data to it
-	ha.Write([]byte(data))
-
-	// Get result and encode as hexadecimal string
-	sha := ha.Sum(nil)
-
-	// base64URL编码
-	rawSig := base64.URLEncoding.EncodeToString(sha)
-
-	// 剪除padding字符
-	sig := strings.TrimRight(rawSig, "=")
+	// 计算签名,这个辅助函数在下一节给出
+	sig := SigBase64URLEncoded(data)
 
 	token := data + "." + sig
 	fmt.Println(token)
@@ -87,13 +74,6 @@ func GenToken() string {
 	return token
 }
 
-func ParseToken(token string) bool {
-
-	return true
-}
-
-
-}
 
 ```
 
@@ -119,5 +99,31 @@ token := data + "." + sig
 
 ## 解析token
 
-`jwt token`的解析直接用`jwt-go`好了，在验证通过之后，还可以对`payload`标准字段中的`过期时间`额外验证，保证该token还未失效。
+`jwt token`的解析直接用`jwt-go`好了，在验证通过之后，还可以对`payload`标准字段中的`过期时间`额外验证，保证该token还未失效。以下代码片段演示签名验证：
 
+```Go
+func ValidToken(token string) bool {
+	idx := strings.LastIndex(token, ".")
+	data, sign := token[:idx], token[idx+1:]
+
+	sigFromData := SigBase64URLEncoded(data)
+
+	fmt.Printf("\n%-5s:%30s\n", "want", sign)
+	fmt.Printf("%-5s:%3s\n", "got", sigFromData)
+
+	return sigFromData == sign
+}
+
+func SigBase64URLEncoded(data string) string {
+	ha := hmac.New(sha256.New, []byte(Secret))
+	// Write Data to it
+	ha.Write([]byte(data))
+	sha := ha.Sum(nil)
+
+	// base64URL编码
+	rawSig := base64.URLEncoding.EncodeToString(sha)
+
+	return strings.TrimRight(rawSig, "=")
+}
+
+```
