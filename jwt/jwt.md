@@ -4,6 +4,9 @@
 
 ## 生成token
 
+实际使用jwt时，一般会用[jwt-go](github.com/dgrijalva/jwt-go)这个第三方库。
+这里试着手动签发token.
+
 ```Go
 
 package main
@@ -15,6 +18,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"strings"
+	"time"
+
+	"github.com/dgrijalva/jwt-go"
 )
 
 type Header struct {
@@ -24,18 +30,29 @@ type Header struct {
 
 // 自定义的payload, 可以嵌入标准Claims
 type Payload struct {
+	jwt.StandardClaims
 	Sub  string `json:"sub"`
 	User string `json:"user"`
 }
 
+// 服务器保管，不可泄露
 const Secret = "jwt_test"
 
 func main() {
+	token := GenToken()
+	fmt.Println(token)
+}
+
+func GenToken() string {
 	h := &Header{
 		Alg: "HS256",
 		Typ: "JWT",
 	}
 	p := &Payload{
+		StandardClaims:jwt.StandardClaims{
+			Issuer: "lfn",
+			ExpiresAt: time.Now().Add(3 * time.Hour).Unix(),
+	},
 		Sub:  "test",
 		User: "lfn",
 	}
@@ -45,7 +62,8 @@ func main() {
 	hBase64URL := base64.URLEncoding.EncodeToString(hJson)
 	pBase64URL := base64.URLEncoding.EncodeToString(pJson)
 
-	data := hBase64URL + "." + pBase64URL
+	// 计算hash之前剪除padding字符
+	data := strings.TrimRight(hBase64URL, "=") + "." + strings.TrimRight(pBase64URL, "=")
 
 
 	// Create a new HMAC by defining the hash type and the key (as byte array)
@@ -60,12 +78,21 @@ func main() {
 	// base64URL编码
 	rawSig := base64.URLEncoding.EncodeToString(sha)
 
-	// 去掉右侧padding符
+	// 剪除padding字符
 	sig := strings.TrimRight(rawSig, "=")
 
-	jwt := data + "." + sig
-    fmt.Println(jwt) 
-    // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwidXNlciI6ImxmbiJ9.UarPvSxHs3ywhTvXHs2Kc4GRwcEWqdah8tdFvY0nAWY
+	token := data + "." + sig
+	fmt.Println(token)
+
+	return token
+}
+
+func ParseToken(token string) bool {
+
+	return true
+}
+
+
 }
 
 ```
@@ -87,4 +114,11 @@ token := data + "." + sig
   
 
 ```
+
+> 有些一站式登录的服务，可能好几个服务共用一个`jwt secret`, 这样一个服务签发的token,同样可以在其他服务通过验证。
+
+
+## 解析token
+
+`jwt token`的解析直接用`jwt-go`好了，在验证通过之后，还可以对`payload`标准字段中的`过期时间`额外验证，保证该token还未失效。
 
