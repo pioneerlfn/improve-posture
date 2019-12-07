@@ -51,7 +51,7 @@
 
 - jwt
 
-    [jwt实战: token生成与解析](./jwt/jwt.md)
+    [jwt实战: token生成与解析](./jwt/README.md)
 - SSO(单点登录)
 - cookie vs localStorage
 - base64
