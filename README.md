@@ -51,13 +51,7 @@
 
 - jwt
 
-    [Introduction to JSON Web Tokens
-](https://jwt.io/introduction/)
-
-    [JSON Web Token 入门教程(阮一峰)
-](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html)
-
-    [jwt token生成与解析](./jwt/jwt.md)
+    [jwt实战: token生成与解析](./jwt/jwt.md)
 - SSO(单点登录)
 - cookie vs localStorage
 - base64
