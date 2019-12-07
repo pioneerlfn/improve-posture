@@ -68,4 +68,5 @@
 ## 语言篇(Go)
 
 ### atomic
-- [为何这里不需要atomic?](../go/atomic/READEME.md)
+
+- [为何这里不需要atomic?](./go/atomic/READEME.md)

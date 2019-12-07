@@ -16,28 +16,24 @@ type Once struct {
 	m    Mutex
 }
 
-func (o *Once) Do(f func()) {
-    // 1
-	if atomic.LoadUint32(&o.done) == 0 {
+func (o *Once) Do(f func()) {    
+	if atomic.LoadUint32(&o.done) == 0 { // 位置1
 		o.doSlow(f)
 	}
 }
 
-func (o *Once) doSlow(f func()) {
-    // 2    
-    o.m.Lock()
-    defer o.m.Unlock()
-    // 3
-	if o.done == 0 {
-        // 4
-		defer atomic.StoreUint32(&o.done, 1)
+func (o *Once) doSlow(f func()) {    
+    o.m.Lock() // 位置2
+    defer o.m.Unlock()    
+	if o.done == 0 { // 位置3        
+		defer atomic.StoreUint32(&o.done, 1) // 位置4
 		f()
 	}
 }
 
 ```
 
-主要关心`注释1,3,4`三个地方对`done`读写的时候，为啥`1和4`需要用`atomic`， 而`3`这个地方不需要呢？
+本文重点分析`注释1,3,4`三个地方对`done`读写的时候，为啥`1和4`需要用`atomic`， 而`3`这个地方却并不需要的问题。
 
 ## 0x02 内存模型
 
@@ -84,5 +80,6 @@ func (o *Once) doSlow(f func()) {
 - [Go 标准库源码学习（一）详解短小精悍的 Once](https://mp.weixin.qq.com/s/Lsm-BMdKCKNQjRndNCLwLw)
 - [memory barrier](https://github.com/cch123/golang-notes/blob/master/memory_barrier.md) (曹春晖老师)
 - [Cache coherency primer](https://fgiesen.wordpress.com/2014/07/07/cache-coherency/)
+
 
 > 本文完。
