@@ -97,9 +97,8 @@ func ParseToken(token string) bool {
 
 ```
 
-> 需要注意的是，header和payload在参与计算签名之前，需要trim掉padding字符; 计算出签名之后，仍然需要对签名用Base64URL编码，并且需要祛除右侧的padding符"=".
-
-所以，在用`Go`计算token的时候，真正公式应该是:
+需要注意的是，header和payload在参与计算签名之前，需要trim掉padding字符; 计算出签名之后，仍然需要对签名用Base64URL编码，并且需要祛除右侧的padding符"=".
+> padding字符详情见 [bas464](../encoding/base64.md)
 
 ```Go
 
