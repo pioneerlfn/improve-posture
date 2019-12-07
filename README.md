@@ -12,6 +12,9 @@
 
 ### 字符集(编码)
 
+- utf8_general_ci
+- utf8mb4
+
 ### 索引
 
 - 覆盖索引
@@ -23,15 +26,44 @@
 
 ## redis
 
+### 原理
+
+- 内存回收
+
+    [理解Redis的内存回收机制
+](https://juejin.im/post/5d107ad851882576df7fba9e?utm_source=weibo&utm_campaign=user)
+
+### 实践
+
 ## kafka
 
 ## nginx
 
 ## web
 
+### HTTP
+
+- Authorization
+
+- 非对称加密
+
+- 数字签名
+
 - jwt
+
+    [Introduction to JSON Web Tokens
+](https://jwt.io/introduction/)
+
+    [JSON Web Token 入门教程(阮一峰)
+](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html)
+- SSO(单点登录)
 - cookie vs localStorage
 - base64
-- 跨域
+- 跨域(CORS)
+- 第三方登录
 
 ## 工具篇
+
+### git
+
+合并commits
