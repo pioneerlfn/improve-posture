@@ -63,3 +63,9 @@
 ### git
 
 合并commits
+
+
+## 语言篇(Go)
+
+### atomic
+- [为何这里不需要atomic?](../go/atomic/READEME.md)
