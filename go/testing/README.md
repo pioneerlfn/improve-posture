@@ -1,5 +1,13 @@
 # Go学习笔记——测试技巧备忘
 
+## table driven test
+
+Go中测试一般使用`表驱动测试`.
+
+> Read More:
+
+- [Testing in Go: Table-Driven Tests](https://ieftimov.com/post/testing-in-go-table-driven-tests/)
+- [Dava Cheney: Prefer table driven tests](https://dave.cheney.net/2019/05/07/prefer-table-driven-tests)
 
 ## subtest
 
