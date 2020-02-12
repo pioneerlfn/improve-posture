@@ -26,3 +26,32 @@ $ go test -v -count=1 -run="TestOlder/FirstOlderThanSecond"
 注意，我们在测试命令中用到了`-run=`开关，用来选择`*_test.go`文件中待测试的函数及测试case. `-run=`选择遵守`正则匹配`规则.
 
 > Read More: [Testing in Go: Subtests](https://ieftimov.com/post/testing-in-go-subtests/)
+
+## TestMain
+
+如果要在测试文件的所有测试函数被测试之前与之后执行一些`setup`以及`teardown`操作，可以使用`TestMain`,一次典型的`TestMain`过程如下:
+
+```go
+func TestMain(m *testing.M) {
+    setup()
+    code := m.Run() 
+    shutdown()
+    os.Exit(code)
+}
+```
+
+> ReadMore: [TestMain—What is it Good For?](http://cs-guy.com/blog/2015/01/test-main/)
+
+## 测试main包中函数
+
+对于测试包go test是一个的有用的工具，但是稍加努力我们也可以用它来测试可执行程序。如果一个包的名字是 main，那么在构建时会生成一个可执行程序，不过main包可以作为一个包被测试器代码导入.
+
+比如我们想要测试`main`包有一个函数`echo`。虽然是main包，也有对应的main入口函数，但是在测试的时候main包只是`TestEcho`测试函数导入的一个普通包，里面main函数并没有被导出，而是被忽略的。
+
+## 参考文章
+
+- `go help test`
+- [The Go Blog: Using Subtests and Sub-benchmarks](https://blog.golang.org/subtests)
+- [The Go Programming Language: Ch11-testing](https://yar999.gitbooks.io/gopl-zh/content/ch11/ch11.html)
+- [Testing in Go: Table-Driven Tests](https://ieftimov.com/post/testing-in-go-table-driven-tests/)
+- [Dava Cheney: Prefer table driven tests](https://dave.cheney.net/2019/05/07/prefer-table-driven-tests)
