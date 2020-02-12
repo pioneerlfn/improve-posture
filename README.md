@@ -70,3 +70,7 @@
 ### atomic
 
 - [为何这里不需要atomic?](./go/atomic/READEME.md)
+
+### go test
+
+- [Go学习笔记——测试技巧备忘](./go/testing/README.md)
