@@ -40,13 +40,32 @@ func TestMain(m *testing.M) {
 }
 ```
 
-> ReadMore: [TestMain—What is it Good For?](http://cs-guy.com/blog/2015/01/test-main/)
+> Read More: [TestMain—What is it Good For?](http://cs-guy.com/blog/2015/01/test-main/)
 
 ## 测试main包中函数
 
 对于测试包go test是一个的有用的工具，但是稍加努力我们也可以用它来测试可执行程序。如果一个包的名字是 main，那么在构建时会生成一个可执行程序，不过main包可以作为一个包被测试器代码导入.
 
 比如我们想要测试`main`包有一个函数`echo`。虽然是main包，也有对应的main入口函数，但是在测试的时候main包只是`TestEcho`测试函数导入的一个普通包，里面main函数并没有被导出，而是被忽略的。
+
+## fixture
+
+
+
+## Dependency Injection(依赖注入)
+
+主要用到两种方式，一种是函数闭包，另一种是接口。
+接口的方法更推荐一点。
+
+## test doubles
+
+之前没听过这个词，以为`mock`就是全部。在看了[Testing in Go: Test Doubles by Example](https://ieftimov.com/post/testing-in-go-test-doubles-by-example/)这篇文章才对这个概念有了基本的了解。 `test doubles`的含义比较广，包括`Dummies, mocks, stubs, fakes, and spies`. 这些方法虽然看起来很像，但是又有一些微妙的不同。也算是各种不同的`pattern`. 能清晰地分辨不同的pattern, 窃以为是码农很重要的能力。
+
+> Read More: [Testing in Go: Test Doubles by Example](https://ieftimov.com/post/testing-in-go-test-doubles-by-example/)
+
+## golden files
+
+当输出的内容太多太复杂时，hardcode的办法就有些力不从心了。这个时候就会就可以用`golden files`的方法，将test的输出内容保存在golen文件中.
 
 ## 参考文章
 
