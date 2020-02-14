@@ -50,7 +50,8 @@ func TestMain(m *testing.M) {
 
 ## fixture
 
-
+`fixture`用到的文件放在`testdata`目录或其子目录下。
+`go build`的时候会忽略`testdata`目录。
 
 ## Dependency Injection(依赖注入)
 
@@ -66,6 +67,9 @@ func TestMain(m *testing.M) {
 ## golden files
 
 当输出的内容太多太复杂时，hardcode的办法就有些力不从心了。这个时候就会就可以用`golden files`的方法，将test的输出内容保存在golen文件中.
+
+`golden files`仍然放在`testdata`目录下。
+
 
 ## 参考文章
 
