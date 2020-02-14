@@ -74,3 +74,7 @@
 ### go test
 
 - [Go学习笔记——测试技巧备忘](./go/testing/README.md)
+
+### 字符串
+
+- [如何多快好省拼接字符串?](./go/strings/README.md)
