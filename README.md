@@ -52,6 +52,9 @@
 - jwt
 
     [jwt实战: token生成与解析](./jwt/README.md)
+- OAuth
+    - [How to do Google sign-in with Go](https://skarlso.github.io/2016/06/12/google-signin-with-go/)
+    - [How to do Google Sign-In with Go - Part 2](https://skarlso.github.io/2016/11/02/google-signin-with-go-part2/)
 - SSO(单点登录)
 - cookie vs localStorage
 - base64
