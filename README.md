@@ -81,7 +81,7 @@
 ### 字符串
 
 - [如何多快好省拼接字符串?](./go/strings/README.md)
-
+- [分隔字符串注意事项](./go/strings/split.md)
 ### 时间问题
 
 - [时区问题](./go/time/README.md)
