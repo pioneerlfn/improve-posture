@@ -41,6 +41,8 @@
 
 ## web
 
+- [web application vs web service](./web/app-service.md)
+
 ### HTTP
 
 - Authorization
