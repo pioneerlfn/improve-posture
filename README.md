@@ -45,6 +45,8 @@
 
 ### HTTP
 
+- [HTTP Method](./web/http.md)
+
 - Authorization
 
 - 非对称加密
