@@ -31,7 +31,7 @@ We know the data is sent to the server through an HTTP POST request and is place
 The format of the name-value pairs sent through a POST request is specified by the content type of the HTML form. This is defined using the enctype attribute like this:
 
 ```html
-<form action="/process" method="post" enctype="application/x-www- ➥ form-urlencoded">
+<form action="/process" method="post" enctype="application/x-www-form-urlencoded">
   <input type="text" name="first_name"/>
   <input type="text" name="last_name"/>
   <input type="submit"/>
@@ -40,17 +40,22 @@ The format of the name-value pairs sent through a POST request is specified by t
 
 The default value for enctype is `application/x-www-form-urlencoded`. Browsers are required to support at least application/x-www-form-urlencoded and multipart/ form-data (*HTML5 also supports a text/plain value*).
 
-If we set enctype to `application/x-www-form-urlencoded`, the browser will encode in the HTML form data a long query string, with the name-value pairs sepa- rated by an ampersand (&) and the name separated from the values by an equal sign (=). That’s the same as URL encoding, hence the name (see chapter 1). In other words, the HTTP body will look something like this:
+If we set enctype to `application/x-www-form-urlencoded`, the browser will encode in the HTML form data a long query string, with the name-value pairs sepa- rated by an ampersand (`&`) and the name separated from the values by an equal sign (`=`). That’s the same as URL encoding, hence the name.
+In other words, the HTTP body will look something like this:
 ```
 first_name=sau%20sheong&last_name=chang
 ```
 
 If you set enctype to `multipart/form-data`, each name-value pair will be converted into a MIME message part, each with its own content type and content disposition. Our form data will now look something like this:
 ```
-------WebKitFormBoundaryMPNjKpeO9cLiocMw Content-Disposition: form-data; name="first_name"
-sau sheong ------WebKitFormBoundaryMPNjKpeO9cLiocMw Content-Disposition: form-data; name="last_name"
-        chang
-        ------WebKitFormBoundaryMPNjKpeO9cLiocMw--
+------WebKitFormBoundaryMPNjKpeO9cLiocMw 
+Content-Disposition: form-data; name="first_name"
+
+sau sheong 
+------WebKitFormBoundaryMPNjKpeO9cLiocMw Content-Disposition: form-data; name="last_name"
+
+chang
+------WebKitFormBoundaryMPNjKpeO9cLiocMw--
 
 ```
 When would you use one or the other? If you’re sending simple text data, the URL encoded form is better—it’s simpler and more efficient and less processing is needed. If you’re sending large amounts of data, such as uploading files, the multipart-MIME form is better. You can even specify that you want to do Base64 encoding to send binary data as text.
