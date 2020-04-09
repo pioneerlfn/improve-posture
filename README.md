@@ -14,6 +14,9 @@
 
 - utf8_general_ci
 - utf8mb4
+- [彻底解决MySQL中的乱码问题](https://mp.weixin.qq.com/s/58Y11c8cLN1uDfHn_6lyAg)
+
+
 
 ### 索引
 
