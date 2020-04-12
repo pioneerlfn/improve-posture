@@ -53,22 +53,22 @@
 
 5. 确认
 
-以用户名`lfn@localhost`登录，确认能看到`example`数据库。
-```bash
-~ mysql -ulfn -p
-```
+    以用户名`lfn@localhost`登录，确认能看到`example`数据库。
+    ```bash
+    ~ mysql -ulfn -p
+    ```
 
-```mysql
-mysql> show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| example            |
-+--------------------+
-2 rows in set (0.00 sec)
+    ```mysql
+    mysql> show databases;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | example            |
+    +--------------------+
+    2 rows in set (0.00 sec)
 
-```
+    ```
 
 ## 推荐阅读
 - [How To Create User Accounts Using MySQL CREATE USER Statement](https://www.mysqltutorial.org/mysql-create-user.aspx)
