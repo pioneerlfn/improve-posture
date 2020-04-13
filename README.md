@@ -87,6 +87,9 @@
 
 ## 语言篇(Go)
 
+### defer
+- [defer相关问题](./go/defer/README.md)
+
 ### atomic
 
 - [为何这里不需要atomic?](./go/atomic/READEME.md)
