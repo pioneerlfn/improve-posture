@@ -88,6 +88,10 @@
 
 - [无法刷出数据的问题](./tools/sequelpro.md)
 
+### json
+
+- [在终端pprint json](./tools/json.md)
+
 
 ## 语言篇(Go)
 
