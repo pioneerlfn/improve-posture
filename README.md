@@ -84,6 +84,10 @@
 
 合并commits
 
+### Sequel Pro
+
+- [无法刷出数据的问题](./tools/sequelpro.md)
+
 
 ## 语言篇(Go)
 
