@@ -1,4 +1,4 @@
-    ## ResponseWriter接口
+## ResponseWriter接口
 
 `ResponseWriter`接口有三个方法:
   - Write
@@ -25,7 +25,7 @@
 
 3. WriteHeader
 
-- 调用`WriteHeader`之后，就无法再写response的头部字段了，不过可以继续调用`write`写body.
-- 如果不调用这个方法，那么会自动写入状态码`200 OK`.
+    - 调用`WriteHeader`之后，就无法再写response的头部字段了，不过可以继续调用`write`写body.
+    - 如果不调用这个方法，那么会自动写入状态码`200 OK`.
 
 
