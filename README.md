@@ -119,6 +119,11 @@
 - [写ResponseWriter的一点注意事项](./go/http/README.md)
 
 
-## C 
+## 语言篇(C)
 
 - [setjmp-longjmp](./c/setjmp-longjmp.md)
+
+
+## 语言篇(shell)
+
+- [给一个英文文本文件，输出前十个出现次数最多的单词](./shell/top10.md)
