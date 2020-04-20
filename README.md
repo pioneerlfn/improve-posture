@@ -38,7 +38,6 @@
 
 ## 语言篇(Go)
 
-### 分布式锁
 - [Go中使用基于etcd的分布式锁](./go/distributed/locks.go)
 - [defer相关问题](./go/defer/README.md)
 - [为何这里不需要atomic?](./go/atomic/READEME.md)
@@ -47,6 +46,7 @@
 - [分隔字符串注意事项](./go/strings/split.md)
 - [时区问题](./go/time/README.md)
 - [写ResponseWriter的一点注意事项](./go/http/README.md)
+- [使用EqualFold比价字符串大小](./go/strings/equalfold.md)
 
 
 ## 语言篇(C)
