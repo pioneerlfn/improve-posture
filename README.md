@@ -91,8 +91,14 @@
 
 - [在终端pprint json](./tools/json/print.md)
 
+### ssh实现反向端口转发(内网穿透)
+
+- [反向端口转发采坑](./tools/ssh.md)
 
 ## 语言篇(Go)
+
+### 分布式锁
+- [Go中使用基于etcd的分布式锁](./go/distributed/locks.go)
 
 ### defer
 - [defer相关问题](./go/defer/README.md)
