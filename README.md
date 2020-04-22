@@ -35,6 +35,7 @@
 - [Sequel Pro无法刷出数据的问题](./tools/sequelpro.md)
 - [在终端pprint json](./tools/json/print.md)
 - [ssh反向端口转发采坑](./tools/ssh.md)
+- [听说你也要变基](./tools/rebase.md)
 
 ## 语言篇(Go)
 
