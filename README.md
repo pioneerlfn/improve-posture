@@ -5,6 +5,7 @@
 ## mysql
 
 - [彻底解决MySQL中的乱码问题](https://mp.weixin.qq.com/s/58Y11c8cLN1uDfHn_6lyAg)
+- [利用函数COALESCE 处理记录中的NULL](./mysql/coalesce.md)
 
 ## redis
 
