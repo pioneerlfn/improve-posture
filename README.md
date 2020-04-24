@@ -31,8 +31,9 @@
 
 ## 运维篇
 
-- [mysql账户问题](./mysql/user/README.md)
+- [mysql添加用户并收入数据库权限](./mysql/user/README.md)
 - [mysql登录问题](./mysql/login/README.md)
+- [ubuntu 20.04安装Mysql后root密码未知](./mysql/passwd.md)
 - [Sequel Pro无法刷出数据的问题](./tools/sequelpro.md)
 - [在终端pprint json](./tools/json/print.md)
 - [ssh反向端口转发采坑](./tools/ssh.md)
