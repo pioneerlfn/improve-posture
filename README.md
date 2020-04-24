@@ -52,6 +52,7 @@
 - [使用EqualFold比价字符串大小](./go/strings/equalfold.md)
 - [http.Request备忘](./go/http/request.md)
 - [Unmarshal JSON](./go/json/unmarshal.md)
+- [计算字符串的MD5散列值](./go/crypto/md5.md)
 
 ## 语言篇(C)
 
