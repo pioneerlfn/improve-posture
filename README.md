@@ -53,6 +53,7 @@
 - [http.Request备忘](./go/http/request.md)
 - [Unmarshal JSON](./go/json/unmarshal.md)
 - [计算字符串的MD5散列值](./go/crypto/md5.md)
+- [interface与反射使用示例:一个较为通用的数据库查询函数](./go/reflect/mysql.go)
 
 ## 语言篇(C)
 
