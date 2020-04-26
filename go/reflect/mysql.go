@@ -10,10 +10,8 @@ import (
 	"github.com/jmoiron/sqlx"
 )
 
-
-
 type wantedType struct {
-	RetweetNum  int   `json:"retweet_num" db:"retweet_num"`
+	RetweetNum  int    `json:"retweet_num" db:"retweet_num"`
 	PublishTool string `json:"publish_tool" db:"publish_tool"`
 }
 
@@ -38,7 +36,7 @@ func main() {
 
 // 可以作为一个通用util函数，降低代码冗余
 func getTableRowsByField(ctx context.Context, db *sqlx.DB, sqlTpl, table string,
-	 fields map[string]interface{}, result interface{}) error {
+	fields map[string]interface{}, result interface{}) error {
 	rawQeury := fmt.Sprintf(sqlTpl, table) + " %s "
 	var (
 		fieldsValue []interface{}
@@ -47,7 +45,7 @@ func getTableRowsByField(ctx context.Context, db *sqlx.DB, sqlTpl, table string,
 	if len(fields) > 0 {
 		rawSql, fieldsValue = assembleQuerySQL(rawQeury, fields)
 	}
-
+	// 利用sqlx的Select，不用自己scan
 	err := db.Select(result, rawSql, fieldsValue...)
 	if err != nil {
 		panic(err)
@@ -96,7 +94,6 @@ func assembleQuerySQL(sql string, fields map[string]interface{}) (string, []inte
 	sql = fmt.Sprintf(sql, strings.Join(dest, " AND "))
 	return sql, fieldsValue
 }
-
 
 // scanAll是sqlx中Select最后会调用的一个函数
 // 在这个函数中，会通过Interface()将result的类型还原，从而将结果扫描进去
