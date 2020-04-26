@@ -26,3 +26,6 @@
 简单来说，就是把我们要通信的原始报文(我们以为我们在一个局域网内通讯，比如我172.16.1.2/24想要找172.16.1.3/24)，外层加上一层vxlan header, 整体作为payload，通过UDP协议通信。所以“原始报文+vxlan header”是UDP通信的payload, 这个UDP通信自然是利用三层网络了，和我们平时网上冲浪🏄的过程一样。
 
 
+## 推荐阅读
+- [vxlan协议原理](https://cizixs.com/2017/09/25/vxlan-protocol-introduction)
+- [linux 上实现 vxlan 网络](https://cizixs.com/2017/09/28/linux-vxlan/)
