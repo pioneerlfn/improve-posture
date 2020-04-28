@@ -64,4 +64,5 @@ func parallize(ctx context.Context, workers int, jobs int, doJob func(idx int)) 
 			}
 		}()
 	}
+	wg.Wait()
 }
