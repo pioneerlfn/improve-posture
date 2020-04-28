@@ -72,4 +72,5 @@
 ## OS篇
 
 - [初探cgroup](./os/cgroup.md)
-- [cgroup之cpu子系统](./os/cgroup-cpu.md)
+- [cgroup子系统——cpu](./os/cgroup-cpu.md)
+- [cgroup子系统——cpuset](./os/cgroup-cpuset.md)

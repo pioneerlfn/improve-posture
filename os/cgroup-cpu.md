@@ -15,7 +15,8 @@ cpu 子系统可以调度 cgroup 对 CPU 的获取量。可用以下两个调度
         2. 上限为1s(1000000), 下限为1000us(1000)
 
     - cpu.cfs_quota_us
-    `cfs_quata_us`根据与`cfs_period_us`的比例来表示占用多少的CPU资源。
+
+        `cfs_quata_us`根据与`cfs_period_us`的比例来表示占用多少的CPU资源。
     
         比如`cfs_period_us`为250ms(250000), `cfs_quota_us`为500ms(500000),那就代表2个CPU，如果为100ms, 那就是1/4个cpu资源。
 2. 相对值
