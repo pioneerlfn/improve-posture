@@ -59,6 +59,8 @@
 - [计算字符串的MD5散列值](./go/crypto/md5.md)
 - [interface与反射使用示例:一个较为通用的数据库查询函数](./go/reflect/mysql.go)
 - [并发执行任务:一段常用的代码](./go/concurrency/parralize.go)
+- [一直循环直到被通知退出](./go/concurrency/for-select.md)
+- [Go并发pattern: or-done-channel](./go/concurrency/or-done.md)
 
 ## 语言篇(C)
 
