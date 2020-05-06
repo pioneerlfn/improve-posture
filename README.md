@@ -80,3 +80,4 @@
 - [初探cgroup](./os/cgroup.md)
 - [cgroup子系统——cpu](./os/cgroup-cpu.md)
 - [cgroup子系统——cpuset](./os/cgroup-cpuset.md)
+- [CFS调度算法nice值与权重关系图](./os/weight-nice.py)

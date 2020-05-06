@@ -45,6 +45,9 @@
 
 11. 如果联合索引中出现`NULL`值，会存在一些比较微妙的现象，感兴趣可以看下这篇 [谜之 NULL](https://blog.wolfogre.com/posts/sql-tips/#%E8%B0%9C%E4%B9%8B-null)
 
+12. 除非有充足理由，否则请将每一列都声明为 `NOT NULL`.
+
+
 
 ## 推荐阅读
 - [MySQL NOT NULL Constraint](https://www.mysqltutorial.org/mysql-not-null-constraint/)
