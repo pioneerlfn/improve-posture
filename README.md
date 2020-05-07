@@ -43,6 +43,7 @@
 - [在终端pprint json](./tools/json/print.md)
 - [ssh反向端口转发采坑](./tools/ssh.md)
 - [听说你也要变基](./tools/rebase.md)
+- [shell常用命令](./shell/shell.md)
 
 ## 语言篇(Go)
 
@@ -69,11 +70,6 @@
 - [setjmp-longjmp](./c/setjmp-longjmp.md)
 - [注释pause.c(kubernetes)](./c/pause.c)
 - [mmap初体验](./c/mmp.c)
-
-
-## 语言篇(shell)
-
-- [给一个英文文本文件，输出前十个出现次数最多的单词](./shell/top10.md)
 
 ## OS篇
 
