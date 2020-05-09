@@ -77,3 +77,7 @@
 - [cgroup子系统——cpu](./os/cgroup-cpu.md)
 - [cgroup子系统——cpuset](./os/cgroup-cpuset.md)
 - [CFS调度算法nice值与权重关系图](./os/weight-nice.py)
+
+## k8s篇
+- [pod状态](./k8s/pod.md)
+- [service基本知识](./k8s/service.md)

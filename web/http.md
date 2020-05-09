@@ -25,6 +25,27 @@ HTTP 头字段非常灵活，不仅可以使用标准里的 Host、Connection �
 
 - HTTP request headers are mostly optional. The only mandatory header in HTTP 1.1 is the Host header field. But if the message has a message body (which is optional, depending on the method), you’ll need to have either the Content-Length or the Transfer-Encoding header fields
 
+## API返回值
+
+HTTP Code
+很多API的HTTP Code没有被用到，这是非常不恰当的。比如很多接口的HTTP Code 永远都是返回200，200只是表示接口没有挂。
+
+所以还是需要列一下常用的HTTP Code：
+
+| HTTP code | 语义  | 常规用途 |
+| --- | --- | --- | --- |
+| 200	| OK	| 1. GET接口并且返回了正确值;  2. PUT接口修改成功后返回 |
+| 201 | Created |	POST接口成功返回 |
+| 202 | Accepted | POST接口成功返回，**用于异步任务** |
+| 204 |	No Content |	DELETE接口成功后返回 |
+| 400 | Bad Request |	传递了错误参数 |
+| 401 |	Unauthorized |	缺少用户登录信息 |
+| 403 |	Forbidden |	用户权限不足 |
+| 404 |	Not Found |	没有找到相关信息 |
+| 500 | Internal Server Error |	内部错误，通常是bug或者是下游接口错误 |
+
+
+
 ## Html-form
 We know the data is sent to the server through an HTTP POST request and is placed in the body of the request. But how is the data formatted? The HTML form data is always sent as name-value pairs, but how are these name-value pairs formatted in the POST body? It’s important for us to know this because as we receive the POST request from the browser, we need to be able to parse the data and extract the name-value pairs.
 
