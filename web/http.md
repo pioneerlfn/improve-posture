@@ -42,6 +42,7 @@ HTTP Code
 | 401 |	Unauthorized |	缺少用户登录信息 |
 | 403 |	Forbidden |	用户权限不足 |
 | 404 |	Not Found |	没有找到相关信息 |
+| 409 |	Conflict |	冲突 |
 | 500 | Internal Server Error |	内部错误，通常是bug或者是下游接口错误 |
 
 
