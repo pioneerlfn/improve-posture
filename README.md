@@ -8,6 +8,8 @@
 - [利用函数COALESCE 处理记录中的NULL](./mysql/coalesce.md)
 - [关于NULL, 你需要知道的](./mysql/null.md)
 - [DateTime还是Timestamp? 这是个问题](./mysql/time.md)
+- [Mysql数据类型 —— DECIMAL](https://www.mysqltutorial.org/mysql-decimal/)
+- [这篇文章让我理解了 Foreign Key](https://www.mysqltutorial.org/mysql-foreign-key/)
 
 ## redis
 
@@ -82,3 +84,10 @@
 ## k8s篇
 - [pod状态](./k8s/pod.md)
 - [service基本知识](./k8s/service.md)
+
+
+## TODO
+- [ ] 最左匹配
+- [ ] go-mysql: parseTime
+- [ ] httpOnly
+- [ ] http.StatusFound

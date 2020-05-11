@@ -32,9 +32,9 @@ HTTP Code
 
 所以还是需要列一下常用的HTTP Code：
 
-| HTTP code | 语义  | 常规用途 |
-| --- | --- | --- | --- |
-| 200	| OK	| 1. GET接口并且返回了正确值;  2. PUT接口修改成功后返回 |
+| HTTP CODE| 语义 | 常规用途 |
+| ---       | --- | --- |
+| 200 | OK | GET接口并且返回了正确值; <br>PUT接口修改成功后返回 |
 | 201 | Created |	POST接口成功返回 |
 | 202 | Accepted | POST接口成功返回，**用于异步任务** |
 | 204 |	No Content |	DELETE接口成功后返回 |
@@ -44,8 +44,6 @@ HTTP Code
 | 404 |	Not Found |	没有找到相关信息 |
 | 409 |	Conflict |	冲突 |
 | 500 | Internal Server Error |	内部错误，通常是bug或者是下游接口错误 |
-
-
 
 ## Html-form
 We know the data is sent to the server through an HTTP POST request and is placed in the body of the request. But how is the data formatted? The HTML form data is always sent as name-value pairs, but how are these name-value pairs formatted in the POST body? It’s important for us to know this because as we receive the POST request from the browser, we need to be able to parse the data and extract the name-value pairs.
