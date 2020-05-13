@@ -67,12 +67,17 @@
 - [一直循环直到被通知退出](./go/concurrency/for-select.md)
 - [Go并发pattern: or-done-channel](./go/concurrency/or-done.md)
 - [使用runtime.Caller获取调用栈](./go/stack.md)
+- [为什么切片表示范围是前闭后开](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html)
 
 ## 语言篇(C)
 
 - [setjmp-longjmp](./c/setjmp-longjmp.md)
 - [注释pause.c(kubernetes)](./c/pause.c)
 - [mmap初体验](./c/mmp.c)
+
+## 语言篇(python)
+
+- [代码执行可视化](http://www.pythontutor.com/visualize.html#mode=display) (比如比如我们可以看到为何用空列表做为函数默认参数是一种反模式)
 
 ## OS篇
 
@@ -91,3 +96,4 @@
 - [ ] go-mysql: parseTime
 - [ ] httpOnly
 - [ ] http.StatusFound
+- [ ] 将reading-list合并过来
