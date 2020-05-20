@@ -12,3 +12,9 @@ grep -n `find 目录1 目录2 目录3 -name "*.go"` -e "createTaskMonitorData"
 这行命令的意思，是在目录1，目录2，目录3下的`go` 文件中查找包含`createTaskMonitorData`的行.
 
 这行命令特别常用。
+
+## git
+pretty print git log:
+```shell
+git log --all --decorate --oneline --graph
+```
