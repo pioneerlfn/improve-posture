@@ -79,6 +79,7 @@
 
 - [代码执行可视化](http://www.pythontutor.com/visualize.html#mode=display) (比如比如我们可以看到为何用空列表做为函数默认参数是一种反模式)
 - [一桩由错误路径-文件📃名导致的血案](./python/path.md)
+- [模块热加载](./python/reload.md)
 
 ## OS篇
 
