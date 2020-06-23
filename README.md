@@ -68,6 +68,8 @@
 - [Go并发pattern: or-done-channel](./go/concurrency/or-done.md)
 - [使用runtime.Caller获取调用栈](./go/stack.md)
 - [为什么切片表示范围是前闭后开](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html)
+- [function是不可比较的](./go/compare.md)
+- [字节序及 Go encoding/binary 库](https://huangwenwei.com/blogs/endian-and-encoding-binary-package)
 
 ## 语言篇(C)
 
@@ -80,6 +82,7 @@
 - [代码执行可视化](http://www.pythontutor.com/visualize.html#mode=display) (比如比如我们可以看到为何用空列表做为函数默认参数是一种反模式)
 - [一桩由错误路径-文件📃名导致的血案](./python/path.md)
 - [模块热加载](./python/reload.md)
+- [__getattr__与__getattribute__](https://l1nwatch.gitbook.io/writing_solid_python_code_gitbook/di-6-zhang-nei-bu-ji-zhi#jian-yi-60-qu-bie-getattr-he-getattribute-fang-fa)
 
 ## OS篇
 
