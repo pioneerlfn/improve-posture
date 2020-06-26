@@ -70,6 +70,7 @@
 - [为什么切片表示范围是前闭后开](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html)
 - [function是不可比较的](./go/compare.md)
 - [字节序及 Go encoding/binary 库](https://huangwenwei.com/blogs/endian-and-encoding-binary-package)
+- [打印整数的二进制表示](./go/binary_format.go)
 
 ## 语言篇(C)
 
