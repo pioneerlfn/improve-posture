@@ -1,5 +1,55 @@
 ## 关于defer你应该知道的
 
+### defer函数的执行时机
+关于defer的执行时机，Go spec(https://golang.google.cn/ref/spec#Defer_statements) 是这么写的：
+> A "defer" statement invokes a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponding goroutine is panicking.
+
+可见，defer函数，会在defer表达式所在的函数返回的时候执行。所以是**以函数为单位的，不是以goroutine为单位的**
+举个例子:
+
+```go
+   1   │ // defer.go
+	   | package main
+   2   │
+   3   │ import "fmt"
+   4   │
+   5   │ func main() {
+   6   │      fmt.Println("in main") // 1
+   7   │      defer fmt.Println("defer in main") // 9
+   8   │      foo()
+   9   │      fmt.Println("main over") // 8
+  10   │ }
+  11   │
+  12   │ func foo() {
+  13   │      fmt.Println("in foo") // 2
+  14   │      defer fmt.Println("defer in foo") // 7
+  15   │      bar()
+  16   │      fmt.Println("foo over") // 6
+  17   │ }
+  18   │
+  19   │ func bar(){
+  20   │      fmt.Println("in bar") // 3
+  21   │      defer fmt.Println("defer in bar") // 5
+  22   │      fmt.Println("bar over") // 4
+  23   │ }
+```
+
+```shell
+
+go run defer.go
+in main
+in foo
+in bar
+bar over
+defer in bar
+foo over
+defer in foo
+main over
+defer in main
+```
+
+从上面例子也可以看出来，**defer并不是等到`goroutine`退出之前，统一执行goroutine defer栈里的函数，而是在每个函数返回前，如果这个函数里有defer表达式，则会以栈先进后出的顺序执行defer函数**.
+
 ### defer与return的执行顺序
 
 `return`不是原子语句，`return expr`可以分解为:
