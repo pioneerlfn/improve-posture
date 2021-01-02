@@ -1,0 +1,1 @@
+- see also [Visitor Design Pattern in Go(Golang)](https://golangbyexample.com/visitor-design-pattern-go/)
