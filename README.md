@@ -2,6 +2,10 @@
 
 一个后端程序员的自我修养。
 
+## 设计模式
+
+- [设计模式之visitor模式](./visitor)
+
 ## mysql
 
 - [彻底解决MySQL中的乱码问题](https://mp.weixin.qq.com/s/58Y11c8cLN1uDfHn_6lyAg)
