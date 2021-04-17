@@ -16,26 +16,26 @@ import (
 )
 
 type Cache struct {
-	cache         *lru.Cache
-	computeTicket map[uint64]*sync.RWMutex
+	cache       *lru.Cache
+	mutexBucket map[uint64]*sync.RWMutex
 }
 
 var cache *Cache
 
-const checksumCacheSize2 = 100000
+const cacheSize = 100000
 
 func init() {
-	c, err := lru.New(checksumCacheSize2)
+	c, err := lru.New(cacheSize)
 	if err != nil {
 		panic(err)
 	}
 	cache = &Cache{
-		cache:         c,
-		computeTicket: make(map[uint64]*sync.RWMutex, checksumCacheSize2),
+		cache:       c,
+		mutexBucket: make(map[uint64]*sync.RWMutex, cacheSize),
 	}
-	for i := 0; i < checksumCacheSize2; i++ {
+	for i := 0; i < cacheSize; i++ {
 		m := &sync.RWMutex{}
-		cache.computeTicket[uint64(i)] = m
+		cache.mutexBucket[uint64(i)] = m
 	}
 }
 
@@ -53,9 +53,9 @@ func Compute(con *gin.Context) {
 	//获取已备份版本
 	key := con.Query("key")
 
-	mutexIdx := Hash64(key) % checksumCacheSize2
-	cache.computeTicket[mutexIdx].Lock()
-	defer cache.computeTicket[mutexIdx].Unlock()
+	mutexIdx := Hash64(key) % cacheSize
+	cache.mutexBucket[mutexIdx].Lock()
+	defer cache.mutexBucket[mutexIdx].Unlock()
 
 	val, ok := cache.cache.Get(key)
 	if ok {
@@ -68,12 +68,12 @@ func Compute(con *gin.Context) {
 		con.JSON(http.StatusInternalServerError, err.Error())
 		return
 	}
-	updateCache2(key, value)
+	updateCache(key, value)
 	con.JSON(http.StatusOK, value)
 }
 
-func updateCache2(key, checksum string) {
-	cache.cache.Add(key, checksum)
+func updateCache(key, val string) {
+	cache.cache.Add(key, val)
 }
 
 func compute(key string) (string, error) {
