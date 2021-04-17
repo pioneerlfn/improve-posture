@@ -77,6 +77,7 @@
 - [function是不可比较的](./go/compare.md)
 - [字节序及 Go encoding/binary 库](https://huangwenwei.com/blogs/endian-and-encoding-binary-package)
 - [打印整数的二进制表示](./go/binary_format.go)
+- [分段锁实现并发计算](./go/single_flight.go)
 
 ## 语言篇(C)
 
