@@ -50,3 +50,12 @@ k get po -owide | grep spread-ks-225b6-7263-x8 | sort -k 7  | awk '{print $7}' |
 可以看出，这个deployment的pod在宿主机间的分布式不均匀的。
 > Note: 上面👆例子中可以看出`uniq`的用法，`-c`用来统计重复记录出现的次数，也即 Display number of occurrences of each line along with that line:
 
+## sed
+### 删除空格 `sed s/[[:space:]]//g`
+
+## comm
+### 找出两个个文件中相同的记录 `comm -12 file1 file2`
+> 注意：使用`comm`前需要先用`sort`排序
+
+
+
