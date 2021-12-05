@@ -14,6 +14,7 @@
 - [DateTime还是Timestamp? 这是个问题](./mysql/time.md)
 - [Mysql数据类型 —— DECIMAL](https://www.mysqltutorial.org/mysql-decimal/)
 - [这篇文章让我理解了 Foreign Key](https://www.mysqltutorial.org/mysql-foreign-key/)
+- [第一次在工作中用到连表查询](./mysql/join.md)
 
 ## redis
 
