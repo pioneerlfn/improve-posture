@@ -2,6 +2,23 @@
 
 一个后端程序员的自我修养。
 
+## TODO
+> ⭐️代表掌握程度度，满分5颗⭐️
+- [ ] 最左匹配
+- [ ] go-mysql: parseTime
+- [ ] httpOnly
+- [ ] http.StatusFound
+- [ ] 将reading-list合并过来
+- [ ] Go:ticker(怎么用，原理是什么)
+- [x] git ⭐️⭐️⭐️⭐️ `70%`
+- [ ] vim ⭐️⭐️`40%`
+- [ ] 网络
+- [ ] 连表查询 ⭐️⭐️ `40%`
+- [ ] perf查内存泄露
+- [ ] supervisor
+- [ ] Go并发 ⭐️⭐️⭐️ `60%`
+
+
 ## 设计模式
 
 - [设计模式之visitor模式](./visitor)
@@ -103,18 +120,6 @@
 ## k8s篇
 - [pod状态](./k8s/pod.md)
 - [service基本知识](./k8s/service.md)
-
-
-## TODO
-- [ ] 最左匹配
-- [ ] go-mysql: parseTime
-- [ ] httpOnly
-- [ ] http.StatusFound
-- [ ] 将reading-list合并过来
-- [ ] Go:ticker(怎么用，原理是什么)
-- [ ] git
-- [ ] vim
-- [ ] 网络
 
 
 
