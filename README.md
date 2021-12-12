@@ -4,6 +4,7 @@
 
 ## TODO
 > ⭐️代表掌握程度度，满分5颗⭐️
+- [ ] cgroup
 - [ ] 最左匹配
 - [ ] go-mysql: parseTime
 - [ ] httpOnly
@@ -70,6 +71,7 @@
 - [ssh反向端口转发采坑](./tools/ssh.md)
 - [听说你也要变基](./tools/rebase.md)
 - [shell常用命令](./shell/shell.md)
+- [wget的参数详解](./shell/wget.md)
 
 ## 语言篇(Go)
 
