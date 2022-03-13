@@ -58,4 +58,8 @@ k get po -owide | grep spread-ks-225b6-7263-x8 | sort -k 7  | awk '{print $7}' |
 > 注意：使用`comm`前需要先用`sort`排序
 
 
+## 生成token
+```shell
+head -c 16 /dev/urandom | od -An -t x | tr -d ' '
 
+```
