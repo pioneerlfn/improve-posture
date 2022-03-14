@@ -63,3 +63,14 @@ k get po -owide | grep spread-ks-225b6-7263-x8 | sort -k 7  | awk '{print $7}' |
 head -c 16 /dev/urandom | od -An -t x | tr -d ' '
 
 ```
+> /dev/urandom
+> https://unix.stackexchange.com/questions/324209/when-to-use-dev-random-vs-dev-urandom
+
+## 对比目录差量
+```
+shell
+
+rsync -ainv --delay-updates --ignore-times --hard-links
+```
+> 解释见https://explainshell.com/explain?cmd=rsync+-ainv+--delay-updates+--ignore-times+--hard-links+
+
