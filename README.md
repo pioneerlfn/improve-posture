@@ -116,6 +116,7 @@
 
 ## OS篇
 
+- [qemu](./os/qemu.md)
 - [初探cgroup](./os/cgroup.md)
 - [cgroup子系统——cpu](./os/cgroup-cpu.md)
 - [cgroup子系统——cpuset](./os/cgroup-cpuset.md)
