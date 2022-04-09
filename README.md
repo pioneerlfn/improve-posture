@@ -73,6 +73,7 @@
 - [听说你也要变基](./tools/rebase.md)
 - [shell常用命令](./shell/shell.md)
 - [wget的参数详解](./shell/wget.md)
+- [NFS初相识](./nfs/the-begining.md)
 
 ## 语言篇(Go)
 
@@ -121,6 +122,7 @@
 - [cgroup子系统——cpu](./os/cgroup-cpu.md)
 - [cgroup子系统——cpuset](./os/cgroup-cpuset.md)
 - [CFS调度算法nice值与权重关系图](./os/weight-nice.py)
+- [xfs vs ext4](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/managing_file_systems/index#comparison-of-xfs-and-ext4_assembly_overview-of-available-file-systems)
 
 ## k8s篇
 - [pod状态](./k8s/pod.md)
