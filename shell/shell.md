@@ -74,3 +74,11 @@ rsync -ainv --delay-updates --ignore-times --hard-links
 ```
 > 解释见https://explainshell.com/explain?cmd=rsync+-ainv+--delay-updates+--ignore-times+--hard-links+
 
+## tar
+```shell
+	-a # 根据提供的包名自动压缩, 比如xxx.tgz会自动用gzip压缩
+
+```
+
+
+
