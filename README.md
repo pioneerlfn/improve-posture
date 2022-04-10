@@ -110,7 +110,7 @@
 - [setjmp-longjmp](./c/setjmp-longjmp.md)
 - [注释pause.c(kubernetes)](./c/pause.c)
 - [mmap初体验](./c/mmp.c)
-- [GCC-Inline-Assembly-HOWTO](http://www.ibiblio.org/gferg/ldp/GCC-Inline-Assembly-HOWTO.html)
+- [GCC-Inline-Assembly-HOWTO](http://www.ibiblio.org/gferg/ldp/GCC-Inline-Assembly-HOWTO.html) [-tips](./shell/gcc.md)
 
 ## 语言篇(python)
 
