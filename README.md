@@ -130,6 +130,7 @@
 - [什么是strategy merge path](./k8s/strategy_merge_patch.md)
 
 
-
+## 杂项
+- [开源协议](./mis/open-source.md)
 
 

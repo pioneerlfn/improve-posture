@@ -13,3 +13,6 @@ ln -s /usr/bin/qemu-system-x86_64 /usr/bin/qemu
 sudo apt install build-essential # 注意不是apt install gcc    -_-orz
 
 ```
+
+### gcc freestanding
+[freestanding](https://gcc.gnu.org/onlinedocs/gcc/Standards.html)
