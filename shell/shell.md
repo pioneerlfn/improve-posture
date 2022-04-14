@@ -80,5 +80,19 @@ rsync -ainv --delay-updates --ignore-times --hard-links
 
 ```
 
+## tty
+- [TTY 到底是个什么玩意](https://mp.weixin.qq.com/s/MNJ3DrXBkzgwxE8yTBCRBQ?v_p=90&WBAPIAnalysisOriUICodes=10000011_10000011&launchid=10000365--x&wm=3333_2001&aid=01A0pWWb1rXSEKlcJ1hBqP4K0wekuzaAJ0XJ-7LMHEmjjb5fA.&from=10C3593010)
+- [reverse shell cheetsheet](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
+
+
+
+
+
+
+
+
+
+
+
 
 
