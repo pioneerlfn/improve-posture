@@ -19,6 +19,7 @@
 
 ## man need to read
 - [ ] sh (man sh, `dash` not `bash`)
+- [ ] /proc文件系统
 - [ ] mmap (ld大量使用/文件映射,缺页中断再读盘)
 - [ ] fork (调用一次，返回2次，父子进程返回顺序不确定)
 - [ ] exec (调用一次，用不返回 ==means=> reset状态机)
