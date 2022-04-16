@@ -15,3 +15,10 @@
 - ulk
 - apue
 - tlpi
+
+## man need to read
+- [ ] sh (man sh, `dash` not `bash`)
+- [ ] mmap
+- [ ] fork
+- [ ] exec
+- [ ] syscall
