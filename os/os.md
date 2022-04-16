@@ -22,5 +22,5 @@
 - [ ] fork
 - [ ] exec
 - [ ] syscall
-- [ ] vsdo
+- [ ] vsdo (不陷入kernel的系统调用，有趣的把戏)
 
