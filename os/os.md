@@ -9,6 +9,7 @@
 - [linux inside(中文版)](https://github.com/MintCN/linux-insides-zh)
 - [深入理解计算机系统合集/csapp-概念讲解+OS代码实现](https://www.bilibili.com/video/BV17K4y1N7Q2?spm_id_from=333.999.0.0)
 - [Linux 内核 0.12 完全注释-赵炯博士](http://www.oldlinux.org/download/CLK-5.0-WithCover.pdf)
+- [你管这破玩意叫操作系统源码](https://github.com/sunym1993/flash-linux0.11-talk)
 - ostep
 - csapp
 - ulk

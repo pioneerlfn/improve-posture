@@ -77,7 +77,7 @@
 - [wget的参数详解](./shell/wget.md)
 - [NFS初相识](./nfs/the-begining.md)
 - [Makefile](https://seisman.github.io/how-to-write-makefile/index.html) [tips](./shell/make.md)
-- [正则](https://regexr.com/)
+- [正则](./shell/regex.md) 
 - [vim](./shell/vim.md)
 
 ## 语言篇(Go)
