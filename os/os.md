@@ -22,3 +22,5 @@
 - [ ] fork
 - [ ] exec
 - [ ] syscall
+- [ ] vsdo
+
