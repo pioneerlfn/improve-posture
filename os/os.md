@@ -18,9 +18,9 @@
 
 ## man need to read
 - [ ] sh (man sh, `dash` not `bash`)
-- [ ] mmap
-- [ ] fork
-- [ ] exec
-- [ ] syscall
-- [ ] vsdo (不陷入kernel的系统调用，有趣的把戏)
+- [ ] mmap (ld大量使用/文件映射,缺页中断再读盘)
+- [ ] fork (调用一次，返回2次，父子进程返回顺序不确定)
+- [ ] exec (调用一次，用不返回 ==means=> reset状态机)
+- [ ] syscall (相比int0x80更加优化)
+- [ ] vsdo (不陷入kernel的系统调用，有趣的把戏, 比如gettimeofday())
 
