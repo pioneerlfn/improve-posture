@@ -17,7 +17,7 @@
 - apue
 - tlpi
 
-## man need to read
+## manual need to read
 - [ ] sh (man sh, `dash` not `bash`)
 - [ ] /proc文件系统
 - [ ] mmap (ld大量使用/文件映射,缺页中断再读盘)
@@ -25,4 +25,5 @@
 - [ ] exec (调用一次，用不返回 ==means=> reset状态机)
 - [ ] syscall (相比int0x80更加优化)
 - [ ] vsdo (不陷入kernel的系统调用，有趣的把戏, 比如gettimeofday())
-
+- [ ] posix_spawn
+- [ ] [A fork() in the road](https://www.microsoft.com/en-us/research/uploads/prod/2019/04/fork-hotos19.pdf)
