@@ -128,6 +128,7 @@
 - [cgroup子系统——cpuset](./os/cgroup-cpuset.md)
 - [CFS调度算法nice值与权重关系图](./os/weight-nice.py)
 - [xfs vs ext4](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/managing_file_systems/index#comparison-of-xfs-and-ext4_assembly_overview-of-available-file-systems)
+- [Linux快层IO子系统|最核心的逻辑](https://mp.weixin.qq.com/s/7MyGpP8awUp5QURJb_2KGA) (need further study.)
 
 ## k8s篇
 - [pod状态](./k8s/pod.md)
