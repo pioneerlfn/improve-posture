@@ -17,17 +17,19 @@ https://thrift.apache.org/docs/install/os_x.html
 问了下同事怎么安装的，同事说按下面这个教程，步骤如下：
 https://www.jianshu.com/p/2b59f532a492
 
+```shell
 brew uninstall thrift
 cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
-git log ./Formula/thrift.rb | less，拿到thrift 0.10的commmitId是174a7d20d60ee094f016facdccefb34961808323
-切分支
+git log ./Formula/thrift.rb | less，# 拿到thrift 0.10的commmitId是174a7d20d60ee094f016facdccefb34961808323
+# 切分支
 git checkout 174a7d20d60ee094f016facdccefb34961808323
 
-注释掉35行
-vim ./Formula/thrift.rb
-#  depends_on "python@2" => :optional
+# 注释掉35行
+# depends_on "python@2" => :optional
 
 brew install ./Formula/thrift.rb
+
+```
 执行最后一步的时候，报错
 undefined method `cellar' for #<BottleSpecification:0x00007fd3d73ec828>
 试了网上好多办法，都无法解决这个问题，让人头秃。
@@ -135,9 +137,9 @@ http://archive.apache.org/dist/thrift/0.10.0/
 
 make的时候报错了，刚开始报一些bundle版本的错误，根据提示回退到较低版本，还是没法成功。
 最后看到configure里有一些without的配置：
-```
-ruby
-    exclusions = ["--without-ruby", "--disable-tests", "--without-php_extension"]
+```ruby
+    
+	exclusions = ["--without-ruby", "--disable-tests", "--without-php_extension"]
 
     exclusions << "--without-python" if build.without? "python"
     exclusions << "--without-haskell" if build.without? "haskell"
@@ -155,8 +157,8 @@ ruby
 ```
 再执行make, make install, 没有报错
 验证版本：
-➜  thrift-0.10.0 thrift --version
 ```shell
+➜  thrift-0.10.0 thrift --version
 Thrift version 0.10.0
 ➜  thrift-0.10.0 which thrift
 /usr/local/bin/thrift
