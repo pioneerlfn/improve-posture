@@ -79,6 +79,7 @@
 - [Makefile](https://seisman.github.io/how-to-write-makefile/index.html) [tips](./shell/make.md)
 - [正则](./shell/regex.md) 
 - [vim](./shell/vim.md)
+- [编译低版本thrift](./tools/thrift.md)
 
 ## 语言篇(Go)
 

@@ -11,6 +11,7 @@
 - [Linux 内核 0.12 完全注释-赵炯博士](http://www.oldlinux.org/download/CLK-5.0-WithCover.pdf)
 - [你管这破玩意叫操作系统源码](https://github.com/sunym1993/flash-linux0.11-talk)
 - [The Missing Semester of Your CS Education](https://missing-semester-cn.github.io/)
+- [System V Application Binary Interface](http://jyywiki.cn/pages/OS/manuals/sysv-abi.pdf)
 - ostep
 - csapp
 - ulk
