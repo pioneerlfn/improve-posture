@@ -135,7 +135,7 @@
 - [pod状态](./k8s/pod.md)
 - [service基本知识](./k8s/service.md)
 - [什么是strategy merge path](./k8s/strategy_merge_patch.md)
-
+- [openKruise源码阅读](./k8s/kruise.md)
 
 ## 杂项
 - [开源协议](./mis/open-source.md)
