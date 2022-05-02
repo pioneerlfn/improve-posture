@@ -1,2 +1,3 @@
 - [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html)
+- [git docs](https://git-scm.com/docs/)
 - [git diff](http://gitbook.liuhui998.com/3_5.html)
