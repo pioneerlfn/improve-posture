@@ -81,6 +81,12 @@
 - [vim](./shell/vim.md)
 - [编译低版本thrift](./tools/thrift.md)
 
+
+## 算法篇
+- [快排](./algorithm/qsort.md)
+
+
+
 ## 语言篇(Go)
 
 - [Go中使用基于etcd的分布式锁](./go/distributed/locks.go)
