@@ -65,7 +65,7 @@
 ## 运维篇
 
 - [the art of comand line](https://github.com/jlevy/the-art-of-command-line)
-- [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html)
+- [git](./shell/git.md)
 - [mysql添加用户并收入数据库权限](./mysql/user/README.md)
 - [mysql登录问题](./mysql/login/README.md)
 - [ubuntu 20.04安装Mysql后root密码未知](./mysql/passwd.md)
