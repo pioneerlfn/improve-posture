@@ -106,6 +106,8 @@
 - [字节序及 Go encoding/binary 库](https://huangwenwei.com/blogs/endian-and-encoding-binary-package)
 - [打印整数的二进制表示](./go/binary_format.go)
 - [分段锁实现并发计算](./go/single_flight.md)
+- [打造 Go 语言最快的排序算法](https://mp.weixin.qq.com/s/5HqfRGqPyAhFt0krPgMHOQ) // 文章介绍了一种新的排序算法:`pdqsort(pattern defeating qsort`
+
 
 ## 语言篇(C)
 
