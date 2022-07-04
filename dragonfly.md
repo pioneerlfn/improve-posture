@@ -1,5 +1,6 @@
 - 使用helm install
 - 查看结果：
+```shell
 root@ddcloud-kube-master00-v1.py:~$ kubectl get po -n dragonfly-system
 NAME                                 READY     STATUS                  RESTARTS   AGE
 dragonfly-dfdaemon-2vqlx             0/1       Pending                 0          3h
@@ -17,6 +18,7 @@ dragonfly-manager-6f6d7b577d-dgf58   0/1       CrashLoopBackOff        2        
 dragonfly-scheduler-0                0/1       Init:0/1                0          1h
 dragonfly-seed-peer-0                0/1       Pending                 0          3h
 
+```
 - 查看日志
 ```shell
 kubectl logs dragonfly-manager-6f6d7b577d-dgf58 -n dragonfly-system
