@@ -274,7 +274,7 @@ metadata:
 ```
 
 ### /etc/hosts
-
+```shell
 #rename@(2019-06-11 11:02:07) 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 127.0.0.1 localhost localhost4 localhost4.localdomain4 #rename@(2019-06-11 11:02:07)
