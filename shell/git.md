@@ -1,3 +1,4 @@
+- [Git User Manual](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase)
 - [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html)
 - [git docs](https://git-scm.com/docs/)
 - [git diff](http://gitbook.liuhui998.com/3_5.html)

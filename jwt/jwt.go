@@ -43,10 +43,10 @@ func GenToken() string {
 		Typ: "JWT",
 	}
 	p := &Payload{
-		StandardClaims:jwt.StandardClaims{
-			Issuer: "lfn",
+		StandardClaims: jwt.StandardClaims{
+			Issuer:    "lfn",
 			ExpiresAt: time.Now().Add(3 * time.Hour).Unix(),
-	},
+		},
 		Sub:  "test",
 		User: "lfn",
 	}
@@ -58,7 +58,6 @@ func GenToken() string {
 
 	// 计算hash之前剪除padding字符
 	data := strings.TrimRight(hBase64URL, "=") + "." + strings.TrimRight(pBase64URL, "=")
-
 
 	sig := SigBase64URLEncoded(data)
 
