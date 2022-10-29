@@ -79,3 +79,24 @@ chang
 
 ```
 When would you use one or the other? If you’re sending simple text data, the URL encoded form is better—it’s simpler and more efficient and less processing is needed. If you’re sending large amounts of data, such as uploading files, the multipart-MIME form is better. You can even specify that you want to do Base64 encoding to send binary data as text.
+
+
+
+## 客户端校验服务端证书
+
+see [SSL Certificate Verification](https://curl.se/docs/sslcerts.html)
+
+简单来说，在使用curl请求Https的时候，有以下三种方法:
+- `-k`, 不校验，等价于`--insecure`
+- `--cacert`, 指定自己新人的ca来校验服务端的ca
+- `CURL_CA_BUNDLE`, 通过这个环境变量指定ca的路径
+
+
+
+
+
+
+
+
+
+
