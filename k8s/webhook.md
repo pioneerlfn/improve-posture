@@ -1,0 +1,1 @@
+- [Managing a TLS Certificate for Kubernetes Admission Webhook](https://www.velotio.com/engineering-blog/managing-tls-certificate-for-kubernetes-admission-webhook)
